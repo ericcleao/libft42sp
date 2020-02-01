@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/21 19:43:03 by ecerquei          #+#    #+#             */
-/*   Updated: 2020/02/01 11:35:41 by ecerquei         ###   ########.fr       */
+/*   Created: 2020/01/21 19:41:29 by ecerquei          #+#    #+#             */
+/*   Updated: 2020/01/21 20:32:20 by ecerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdlib.h>
+void	ft_bzero(void *s, size_t n)
+{
+	unsigned long int i;
 
-int		ft_atoi(const char *str);
-void	ft_bzero(void *s, size_t n);
-int		ft_isdigit(int c);
-
-int		ft_isspace(int c);
-
-#endif
+	i = 0;
+	while (i < n)
+	{
+		((unsigned char*)s)[i] = (unsigned char)0;
+		i++;
+	}
+}
