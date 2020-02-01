@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/21 19:43:03 by ecerquei          #+#    #+#             */
-/*   Updated: 2020/02/01 11:39:06 by ecerquei         ###   ########.fr       */
+/*   Created: 2020/01/23 14:12:40 by ecerquei          #+#    #+#             */
+/*   Updated: 2020/01/26 10:53:32 by ecerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdlib.h>
+void	*ft_calloc(size_t count, size_t size)
+{
+	void *new;
 
-int		ft_atoi(const char *str);
-void	ft_bzero(void *s, size_t n);
-void	*ft_calloc(size_t count, size_t size);
-int		ft_isdigit(int c);
-
-int		ft_isspace(int c);
-
-#endif
+	new = malloc(count * size);
+	if (new == NULL)
+		return (NULL);
+	ft_bzero(new, count * size);
+	return (new);
+}
