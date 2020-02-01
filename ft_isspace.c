@@ -1,21 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecerquei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/21 19:43:03 by ecerquei          #+#    #+#             */
-/*   Updated: 2020/02/01 11:30:30 by ecerquei         ###   ########.fr       */
+/*   Created: 2020/01/21 20:43:19 by ecerquei          #+#    #+#             */
+/*   Updated: 2020/01/21 21:16:18 by ecerquei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-
-# include <stdlib.h>
-
-int	ft_isdigit(int c);
-int	ft_isspace(int c);
-
-#endif
+int	ft_isspace(int c)
+{
+	return (c == '\t' || c == '\n' || c == '\v' ||
+		c == '\f' || c == '\r' || c == ' ');
+}
